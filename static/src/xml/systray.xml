@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+          <t t-name="WeatherNotification" owl="1">
+              <div class="new_icon">
+                     <div class="icon_div">
+                         <Dropdown class="'o_switch_notification_menu d-none d-md-block'" position="'bottom-end'">
+                                   <t t-set-slot="toggler">
+                                           <i id='show_weather' class='fa fa-cloud'
+                                              style="font-size:18px;color:white;margin-top:3px;"
+                                              role="img" aria-label="Show Weather"/>
+                                   </t>
+                             <body>
+                                 <div class="container">
+                                     <br></br>
+                                     <div class="temp"> <t t-esc="weather.today"/></div>
+                                     <div class="temp" style="font-size:24px;font-weight: bold;"><t t-esc="weather.temp"/>
+                                         <span>    </span>
+                                         <t t-esc="weather.details"/>
+                                         <img t-attf-src="/weather_notification/static/src/img/cloud-scale03.svg"
+                                              style=" height: 70px;"></img></div>
+                                     <div class="summary"><t t-esc="weather.sum"/>
+                                         <span>  in  </span>
+                                         <t t-esc="weather.location"/></div>
+                                     <div class="main_summary"></div>
+                                     <div class="loc"><t t-esc="weather.location"/></div>
+                                     <br></br>
+                                     <div class="last"><h6>Last Updated:</h6>
+                                         <t t-esc="weather.last_sync"/></div>
+                                 </div>
+
+                             </body>
+                         </Dropdown>
+                     </div>
+              </div>
+          </t>
+                </templates>
+
+
