@@ -25,9 +25,9 @@ export class WeatherNotification extends Component {
                 lat = position.coords.latitude;
                  const monthNames = ["January", "February", "March", "April", "May", "June",
                               "July", "August", "September", "October", "November", "December"];
-                const api ="2297bf7470b68dfb297a03e24a8be23f";
+                const api =" "; //api id
                 const base =`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
-                             `lon=${lon}&appid=2297bf7470b68dfb297a03e24a8be23f`;
+                             `lon=${lon}&appid= `;
                 console.log(base);
                 fetch(base)
                    .then((response) => {
